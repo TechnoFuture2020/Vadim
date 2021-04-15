@@ -1,0 +1,23 @@
+.header-logo {
+  font-size: 1.5rem; 
+  // 24px / 16px = 1.5rem, 16px розмiр указаний в html
+  letter-spacing: 0.23em;
+  padding: $gap-20 0px;
+  // em - береться вiдсоток вiд розмiру шрифта указаного в даному блоцi. А якщо не указано то буде братися вiд ближайшого батька
+  // line-height: 20px;
+  // color: #ffffff;
+  // font-weight: 400;
+  // font-family: "Roboto";
+  // text-align: center;
+
+  &__link {
+    display: block;
+  }
+  
+  &__accent {
+    display: inline-block;
+    border: 3px solid $color-highlight;
+    padding: 14px 0px 13px 4px;
+    margin-right: 0.17em;
+  }
+}

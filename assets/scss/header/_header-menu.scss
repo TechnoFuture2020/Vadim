@@ -1,0 +1,21 @@
+.header-menu {
+  position: relative; // таким способом поднимаем контент над overlay
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  @media(max-width: 768px) {
+    background-color: rgba($color-gray-dark, 0.25);
+    box-shadow: -3px 3px 20px -10px black;
+  }
+
+  &__container {
+    display: grid;         // разметска гридом
+    grid-template-columns: auto 1fr;
+    // 1fr - все оставшееся пространство
+    align-items: center; //вертикальное выравнивание
+    position: relative;
+    @extend %container;
+  }
+}

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zxx">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700%7CRoboto:100,300,400,500,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="libs/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <title>GRID-TEMPLATE</title>
+</head>
+<body>
+  <!-- Пример модификатора по БЭМ class="header-navbar__link header-navbar__link--active" 
+  
+   в данной ситуации header-navbar__link--active - модификатор для header-navbar__link
+   или header-navbar--active
+  -->
+
+  <header class="header">
+    <!--  overlay - перекрытие, по свободе переделать этот блок на псевдо-классе ::after -->
+    <div class="header-overlay"></div>
+    
+    <nav class="header-menu">
+
+      <div class="header-menu__container">
+
+        <div class="header-logo">
+          <!-- ставим href="/" так как у нас сервер -->
+          <a class="header-logo__link" href="/" >
+          <span class="header-logo__accent">SITE</span>LOGO
+          </a>
+        </div>
+  
+        <div class="header-navbar">
+          <!-- Кнопка для мобильной версии  -->
+          <div class="header-navbar__btn">
+            <span class="header-navbar__btn-row"></span>
+            <span class="header-navbar__btn-row"></span>
+            <span class="header-navbar__btn-row"></span>
+            <span class="header-navbar__btn-row"></span>
+            <span class="header-navbar__btn-row"></span>
+            <span class="header-navbar__btn-row"></span>
+          </div>
+
+  
+          <!-- Header-menu -->
+          <ul class="header-navbar__list">
+            <li class="header-navbar__item">
+              <a class="header-navbar__link" href="/">Home</a>
+            </li>
+            <li class="header-navbar__item">
+              <a class="header-navbar__link" href="/">About</a>
+            </li>
+            <li class="header-navbar__item">
+              <a class="header-navbar__link" href="/">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </nav>
+
+    <div class="header-content">
+      <div class="header-content__container">
+        <h1 class="header-content__title">WE ARE REAL WEB-DEVELOPERS
+        </h1>
+        <div class="header-content__buttons">
+          <a class="btn" href="#">Learn more</a>
+          <a class="btn" href="#">Get started</a>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+
+  <section class="skills">
+
+    <div class="skills__container">
+      <article class="skills-item">
+        <div class="skills-item__overlay"></div>
+        <div class="skills-item__image"></div>
+        <h3 class="skills-item__title">
+          <a class="skills-item__link" href="#">HTML</a>
+        </h3>
+      </article>
+      <article class="skills-item">
+        <div class="skills-item__overlay"></div>
+        <div class="skills-item__image"></div>
+        <h3 class="skills-item__title">
+          <a class="skills-item__link" href="#">CSS</a>
+        </h3>
+      </article>
+      <article class="skills-item">
+        <div class="skills-item__overlay"></div>
+        <div class="skills-item__image"></div>
+        <h3 class="skills-item__title">
+          <a class="skills-item__link" href="#">Markup</a>
+        </h3>
+      </article>
+      <article class="skills-item">
+        <div class="skills-item__overlay"></div>
+        <div class="skills-item__image"></div>
+        <h3 class="skills-item__title">
+          <a class="skills-item__link" href="#">Web-Design</a>
+        </h3>
+      </article>
+      <article class="skills-item">
+        <div class="skills-item__overlay"></div>
+        <div class="skills-item__image"></div>
+        <h3 class="skills-item__title">
+          <a class="skills-item__link" href="#">Quality Assurance</a>
+        </h3>
+      </article>
+      <article class="skills-item">
+        <div class="skills-item__overlay"></div>
+        <div class="skills-item__image"></div>
+        <h3 class="skills-item__title">
+          <a class="skills-item__link" href="#">Codding</a>
+        </h3>
+      </article>
+      <article class="skills-item">
+        <div class="skills-item__overlay"></div>
+        <div class="skills-item__image"></div>
+        <h3 class="skills-item__title">
+          <a class="skills-item__link" href="#">Adaptabillity</a>
+        </h3>
+      </article>
+      <article class="skills-item">
+        <div class="skills-item__overlay"></div>
+        <div class="skills-item__image"></div>
+        <h3 class="skills-item__title">
+          <a class="skills-item__link" href="#">PHP</a>
+        </h3>
+      </article>
+      <article class="skills-item">
+        <div class="skills-item__overlay"></div>
+        <div class="skills-item__image"></div>
+        <h3 class="skills-item__title">
+          <a class="skills-item__link" href="#">SEO</a>
+        </h3>
+      </article>
+    </div>
+
+    <div class="skills__button">
+      <a class="btn-accent" href="#">View all skills...</a>
+    </div>
+
+  </section>
+
+
+  <script src="libs/jquery/dist/jquery.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  
+</body>
+</html>

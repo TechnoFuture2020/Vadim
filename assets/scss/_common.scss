@@ -1,0 +1,73 @@
+// - - -  GENERAL STYLES - - - 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+  font-family: $font-main;
+  font-size: $font-size-16; // обычно берут 16px за стандарт
+  letter-spacing: 0.1em;
+  color: $color-gray;
+}
+
+h1 {
+  letter-spacing: 0.078em;
+  line-height: 1.2;
+
+  font: {
+    family: $font-header;
+    weight: 300;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $color-light;
+}
+
+.btn {
+  min-width: 250px;
+  border: 2px solid $color-light;
+  background-color: rgba(255, 255, 255, 0.1);
+  @media (max-width: 992px) and (min-width: 768px + 0.1) {
+    min-width: 200px;
+    height: 50px;
+    padding: 12px 10px;
+  }
+  @media (max-width: 768px) {
+    min-width: 170px;
+    height: 40px;
+    padding: 9px 10px;
+  }
+
+}
+
+.btn-accent {
+  min-width: 350px;
+  border: 2px solid $color-primary;
+  background-color: rgba($color-primary, 0.8);
+
+  @media (max-width: 576px) {
+      min-width: auto;
+      width: 100%;
+  }
+}
+
+.btn,
+.btn-accent {
+  display: block;
+  padding: 18px 10px;
+  height: 60px; 
+  // висоту бажано ставити, бо line-height може збити все
+  font-size: 1.125rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-align: center;
+  transition: background-color 0.5s;
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+  }
+}

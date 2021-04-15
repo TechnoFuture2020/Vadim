@@ -1,0 +1,161 @@
+/* - - - -  SKILLS-BLOCK  - - - - - */
+.skills {
+  padding: 10px 10px 40px 10px;
+
+  @media (max-width: 576px) {
+      padding: $gap-20;
+  }
+
+  &__container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "a1 a1 a2 a3"
+                         "a4 a5 a5 a6"
+                         "a7 a8 a9 a6";
+    // grid-template-rows: repeat(3, calc(33.333vh - 13.333px));
+    // это вариант 1:
+    // 4 отступа по 10 px делим на 3 строки и получаем 13.333px
+    // это чтобы каждая строка занимала необходимую высоту и  
+    // на экран помещалось бы 4 отступа по 10px;
+
+    @media (max-width: 992px) and (min-width: 768px + 0,1) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "a1 a1 a2"
+                             "a3 a4 a4"
+                             "a5 a5 a6"
+                             "a7 a8 a6"
+                             "a7 a9 a9";
+    }
+    @media (max-width: 768px) and (min-width: 576px + 0.1) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "a1 a2"
+                             "a3 a2"
+                             "a4 a4"
+                             "a5 a6"
+                             "a5 a7"
+                             "a8 a9";
+    }
+    @media (max-width: 576px) {
+        grid-gap: $gap-20;
+        grid-template-columns: 1fr;
+        grid-template-areas: "a1"
+                             "a2"
+                             "a3"
+                             "a4"
+                             "a5"
+                             "a6"
+                             "a7"
+                             "a8"
+                             "a9";
+    }
+  }
+  
+  &__button {
+    padding-top:  $gap-20;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+.skills-item {
+  position: relative;
+  min-height: calc(33.333vh - 13.333px);
+  overflow: hidden;
+  // ипсользование min-height упростит работу с респонсив
+  // background-color: red;
+
+  &:nth-of-type(1) .skills-item__image {
+      background-image: url(../img/img-html.png);
+  }
+  &:nth-of-type(2) .skills-item__image {
+      background-image: url(../img/img-css.png);
+  }
+  &:nth-of-type(3) .skills-item__image {
+      background-image: url(../img/img-markup.png);
+  }
+  &:nth-of-type(4) .skills-item__image {
+      background-image: url(../img/img-webdesign.png);
+  }
+  &:nth-of-type(5) .skills-item__image {
+      background-image: url(../img/img-qa.png);
+  }
+  &:nth-of-type(6) .skills-item__image {
+      background-image: url(../img/img-codding.png);
+  }
+  &:nth-of-type(7) .skills-item__image {
+      background-image: url(../img/img-adaptability.png);
+  }
+  &:nth-of-type(8) .skills-item__image {
+      background-image: url(../img/img-php.png);
+  }
+  &:nth-of-type(9) .skills-item__image {
+      background-image: url(../img/img-seo.png);
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: $color-primary;
+    opacity: 0.8;
+    transition: opacity 0.5s;
+  }
+  
+  &__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: transform 0.5s;
+  }
+  
+  &__title {
+    z-index: 1;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  &__link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: $gap-20;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    transition: color 0.5s;
+  }
+
+  &:hover {
+    .skills-item__overlay {
+      opacity: 0.95;
+    }
+    .skills-item__image {
+      transform: scale(1.1);
+    }
+    .skills-item__link  {
+      color: $color-accent;
+    }
+  }
+}
+
+@for $i from 1 through 9 {
+  .skills-item:nth-of-type(#{$i}) { 
+    grid-area: a#{$i};
+  }
+}

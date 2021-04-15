@@ -1,0 +1,14 @@
+// - - - - HEADER - - - - 
+.header {
+  min-height: 118.5vh;
+  background-color: $color-primary;
+  background-image: url(../img/img-header.png);
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 100px 0;
+  color: $color-light;
+  display: grid;
+  align-items: center;
+}
