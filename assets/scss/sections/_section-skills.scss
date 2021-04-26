@@ -1,11 +1,10 @@
 /* - - - -  SKILLS-BLOCK  - - - - - */
 .skills {
-  padding: 10px 10px 40px 10px;
+  padding: 10px 8px 40px 6px;
 
   @media (max-width: 576px) {
       padding: $gap-20;
   }
-
   &__container {
     display: grid;
     grid-gap: 10px;
@@ -19,6 +18,9 @@
     // это чтобы каждая строка занимала необходимую высоту и  
     // на экран помещалось бы 4 отступа по 10px;
 
+    .skills-item__link {
+      color: $color-light;
+    }
     @media (max-width: 992px) and (min-width: 768px + 0,1) {
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas: "a1 a1 a2"
@@ -61,7 +63,7 @@
 
 .skills-item {
   position: relative;
-  min-height: calc(33.333vh - 13.333px);
+  min-height: calc(39vh - 6px);
   overflow: hidden;
   // ипсользование min-height упростит работу с респонсив
   // background-color: red;

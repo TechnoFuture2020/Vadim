@@ -7,7 +7,7 @@ html {
   overflow-y: scroll;
   font-family: $font-main;
   font-size: $font-size-16; // обычно берут 16px за стандарт
-  letter-spacing: 0.1em;
+  // letter-spacing: 0.1em;
   color: $color-gray;
 }
 
@@ -16,16 +16,27 @@ h1 {
   line-height: 1.2;
 
   font: {
-    family: $font-header;
+    family: $font-RobotoSlab;
     weight: 300;
   }
 }
-
+h2 {
+  font-size: 40px;
+  line-height: 48px;
+  color: $color-primary;
+  font-weight: 700;
+  font-family: $font-RobotoSlab;
+}
 a {
   text-decoration: none;
   color: $color-light;
 }
-
+input[placeholder] {
+  text-overflow:ellipsis;
+}
+input:focus {
+  outline: none;
+}
 .btn {
   min-width: 250px;
   border: 2px solid $color-light;
@@ -42,7 +53,10 @@ a {
   }
 
 }
-
+.about__img {
+  max-width: 100%;
+  height: auto;
+}
 .btn-accent {
   min-width: 350px;
   border: 2px solid $color-primary;

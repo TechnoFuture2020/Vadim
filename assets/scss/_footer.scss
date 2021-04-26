@@ -1,0 +1,54 @@
+.footer {
+  padding: 37px 20px 68px;
+  margin-bottom: 13px;
+  text-align: center;
+  background-color: $color-primary;
+  &__container {
+    max-width: 1340px;
+    margin: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  &__social {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    margin-bottom: 53px;
+    // grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+    grid-template-columns: repeat(5, auto);
+    grid-column-gap: 18px;
+    &::after {
+      content: "";
+      display: block;
+      width: 76px;
+      height: 2px;
+      position: absolute;
+      left: 47%;
+      top: 75px;
+      background-color: rgba($color-light, 0.1);
+    }
+    a {
+      display: block;
+      padding: 10px 0px 10px 0px;
+      transition: color 0.5s;
+      &:hover {
+        color: $color-accent;
+      }
+    }
+    .fab {
+      font-size: 36px;
+    }
+  }
+  &__epigraph {
+    span:nth-of-type(1) {
+      margin-right: -0.5em;
+      letter-spacing: 0.33em;
+      font-weight: 100;
+    }
+    span:nth-of-type(2) {
+      letter-spacing: 0.05em;
+      color: $color-gray-light;
+      font-weight: 700;
+    }
+  } 
+}

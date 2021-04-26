@@ -1,0 +1,106 @@
+.posts {
+  padding-top: 100px;
+  padding-bottom: 101px;
+
+  &__container {
+    max-width: 1340px;
+    margin: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    h2 {
+      letter-spacing: 4px;
+      margin-top: 2px;
+      margin-bottom: 56px;
+    }
+  }
+  &__block {
+    display: grid;
+    grid-template-areas: "p1 p1 p2 p3"
+                         "p4 p5 p6 p6";
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding-bottom: 20px;
+  }
+  &-item {
+    transition: background-color 0.5s;
+    background-color: $color-gray2;
+    &:hover {
+      background-color: $color-gray3;
+      .posts-item__img img {
+        transform: scale(1.1);
+      }
+    }
+  }
+  &-item:nth-of-type(1) {
+    grid-area: p1;
+  }
+  &-item:nth-of-type(2) {
+    grid-area: p2;
+    .posts-item__text > h3 {
+      margin-top: 0px;
+    }
+  }
+  &-item:nth-of-type(3) {
+    grid-area: p3;
+  }
+  &-item:nth-of-type(4) {
+    grid-area: p4;
+    .posts-item__text > h3 {
+      margin-top: 0px;
+    }
+  }
+  &-item:nth-of-type(5) {
+    grid-area: p5;
+  }
+  &-item:nth-of-type(6) {
+    grid-area: p6;
+  }
+  &-item__link  {
+    display: grid;
+    grid-template-rows: 300px 1fr;
+    height: 100%;
+    overflow: hidden;
+    color: $color-gray;
+  }
+  &-item__img {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+    img {
+      transition: transform 0.5s;
+      max-width: 100%;
+    }
+  }
+  &-item__text {
+    display: grid;
+    padding: 20px 20px 32px 20px;
+    align-content: center;
+  }
+  &-item__text h3 {
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-align: center;
+    font: {
+      weight: 700;
+      family: "Roboto Slab";
+    }
+  }
+  &-item__text p {
+    text-align: center;
+    font: {
+      weight: 400;
+      family: $font-main;
+    }
+  }
+  &__btn-container {
+    display: flex;
+    justify-content: center;
+    .btn-accent[type=button] {
+      color: $color-light;
+      margin-right: 1px;
+      padding-left: 12px;
+    }
+  }
+}
