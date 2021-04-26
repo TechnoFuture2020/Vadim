@@ -1,2 +1,3 @@
 # Vadim
-Learning
+Site created with grid layout
+https://technofuture2020.github.io/Vadim/
