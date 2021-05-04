@@ -5,6 +5,9 @@
   @media (max-width: 576px) {
       padding: $gap-20;
   }
+  @media (max-width: 992px) and (min-width: 768px + 0.1) {
+    padding: 10px 10px 40px 10px;
+  }
   &__container {
     display: grid;
     grid-gap: 10px;
@@ -12,23 +15,19 @@
     grid-template-areas: "a1 a1 a2 a3"
                          "a4 a5 a5 a6"
                          "a7 a8 a9 a6";
-    // grid-template-rows: repeat(3, calc(33.333vh - 13.333px));
-    // это вариант 1:
-    // 4 отступа по 10 px делим на 3 строки и получаем 13.333px
-    // это чтобы каждая строка занимала необходимую высоту и  
-    // на экран помещалось бы 4 отступа по 10px;
-
     .skills-item__link {
-      color: $color-light;
+    color: $color-light;
     }
-    @media (max-width: 992px) and (min-width: 768px + 0,1) {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "a1 a1 a2"
-                             "a3 a4 a4"
-                             "a5 a5 a6"
-                             "a7 a8 a6"
-                             "a7 a9 a9";
+
+    @media (max-width: 992px) and (min-width: 768px + 0.1) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "a1 a1 a2"
+                           "a3 a4 a4"
+                           "a5 a5 a6"
+                           "a7 a8 a6"
+                           "a7 a9 a9";
     }
+
     @media (max-width: 768px) and (min-width: 576px + 0.1) {
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: "a1 a2"
@@ -57,6 +56,10 @@
     padding-top:  $gap-20;
     display: flex;
     justify-content: center;
+
+    @media (max-width: 992px) and (min-width: 768px + 0.1) {
+      padding-top: 19px;
+    }
   }
 }
 
@@ -67,6 +70,18 @@
   overflow: hidden;
   // ипсользование min-height упростит работу с респонсив
   // background-color: red;
+
+  @media (max-width: 992px) and (min-width: 768px + 0.1) {
+    min-height: calc(43vh - 1px);
+    max-width: 640px;
+    &:nth-of-type(2), &:nth-of-type(3) { 
+      min-width: 322px;
+    }
+    &:nth-of-type(7) { 
+      max-width: 320px;
+      letter-spacing: 0.06em;
+    }
+  }
 
   &:nth-of-type(1) .skills-item__image {
       background-image: url(../img/img-html.png);

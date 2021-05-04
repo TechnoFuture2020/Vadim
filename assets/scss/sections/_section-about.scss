@@ -2,25 +2,49 @@
   background-color: $color-gray-light;
   padding-top: 90px;
   padding-bottom: 63px;
+  @media (max-width: 992px) and (min-width: 768px + 0.1) {
+    padding-top: 64px;
+    padding-bottom: 30px;
+  }
   
   &__container {
     margin: 0 auto;
-    max-width: 1300px;
+    max-width: 1340px;
     display: grid;
-    gap: 100px;
+    gap: 95px;
     grid-template-columns: 1fr 271px;
-  }
+    padding: 0px 19px 0px 20px;
+    @media (max-width: 992px) and (min-width: 768px + 0.1) {
+      gap: 50px;
+      }
+    }
+
   &__text {
     h2 {
       margin: 10px 0 52px;
       letter-spacing: 0.093em;
+      @media (max-width: 992px) and (min-width: 768px + 0.1) {
+        font-size: 32px;
+        line-height: 2.5rem;
+        letter-spacing: 3px;
+        margin: 15px 0px 29px 0px;
+      }
     }
     p {
+      margin-top: 18px;
       font-size: 18px;
       letter-spacing: 0.05em;
       line-height: 23px;
       font-weight: 400;
       font-family: $font-main;
+      @media (max-width: 992px) and (min-width: 768px + 0.1) {
+        line-height: 24px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+        &:last-of-type {
+          display: none;
+        }
+      }
     }
     p:first-of-type {
       position: relative;
@@ -31,11 +55,15 @@
       width: 2px;
       height: 200px;
       position: absolute;
-      right: -57px;
+      right: -53px;
       top: -4px;
       background-color: rgba($color-gray-midle, 0.1);
+      @media (max-width: 992px) and (min-width: 768px + 0.1) {
+        right: -24px;
+      }
     }
   }
+
   &__image {
     max-width: 100%;
     height: auto;
@@ -43,6 +71,12 @@
     img {
       position: relative;
       right: 1px;
+      @media (max-width: 992px) and (min-width: 768px + 0.1) {
+        right: -14px;
+        top: 10px;
+        width: 94%;
+      }
     }
   }
+
 }

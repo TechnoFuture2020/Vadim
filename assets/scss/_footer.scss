@@ -1,6 +1,5 @@
 .footer {
   padding: 37px 20px 68px;
-  margin-bottom: 13px;
   text-align: center;
   background-color: $color-primary;
   &__container {
@@ -11,6 +10,7 @@
   }
   &__social {
     position: relative;
+    top: 1px;
     display: grid;
     justify-content: center;
     margin-bottom: 53px;
@@ -23,9 +23,12 @@
       width: 76px;
       height: 2px;
       position: absolute;
-      left: 47%;
+      left: calc(50% - 38px);
       top: 75px;
       background-color: rgba($color-light, 0.1);
+      @media (max-width: 992px) and (min-width: 768px + 0.1) {
+        background-color: $color-light;
+      }
     }
     a {
       display: block;
@@ -44,6 +47,13 @@
       margin-right: -0.5em;
       letter-spacing: 0.33em;
       font-weight: 100;
+      @media (max-width: 992px) and (min-width: 768px + 0.1) {
+        letter-spacing: 1px;
+        line-height: 20px;
+        color: $color-gray;
+        font-weight: 700;
+        margin-right: 0;
+      }
     }
     span:nth-of-type(2) {
       letter-spacing: 0.05em;

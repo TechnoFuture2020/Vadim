@@ -1,6 +1,10 @@
 .posts {
   padding-top: 100px;
   padding-bottom: 101px;
+  @media (max-width: 992px) and (min-width: 768px + 0.1) {
+    padding-top: 62px;
+    padding-bottom: 80px;
+  }
 
   &__container {
     max-width: 1340px;
@@ -11,8 +15,14 @@
       letter-spacing: 4px;
       margin-top: 2px;
       margin-bottom: 56px;
+      @media (max-width: 992px) and (min-width: 768px + 0.1) {
+        font-size: 2rem;
+        letter-spacing: 0.1em;
+        margin-bottom: 50px;
+      }
     }
   }
+
   &__block {
     display: grid;
     grid-template-areas: "p1 p1 p2 p3"
@@ -20,10 +30,18 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
     padding-bottom: 20px;
+    @media (max-width: 992px) and (min-width: 768px + 0.1) {
+      grid-template-areas: "p1 p1 p2"
+                           "p3 p4 p4"
+                           "p5 p5 p6";
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
+
   &-item {
     transition: background-color 0.5s;
     background-color: $color-gray2;
+    min-height: 550px;
     &:hover {
       background-color: $color-gray3;
       .posts-item__img img {
@@ -31,30 +49,7 @@
       }
     }
   }
-  &-item:nth-of-type(1) {
-    grid-area: p1;
-  }
-  &-item:nth-of-type(2) {
-    grid-area: p2;
-    .posts-item__text > h3 {
-      margin-top: 0px;
-    }
-  }
-  &-item:nth-of-type(3) {
-    grid-area: p3;
-  }
-  &-item:nth-of-type(4) {
-    grid-area: p4;
-    .posts-item__text > h3 {
-      margin-top: 0px;
-    }
-  }
-  &-item:nth-of-type(5) {
-    grid-area: p5;
-  }
-  &-item:nth-of-type(6) {
-    grid-area: p6;
-  }
+
   &-item__link  {
     display: grid;
     grid-template-rows: 300px 1fr;
@@ -62,6 +57,7 @@
     overflow: hidden;
     color: $color-gray;
   }
+
   &-item__img {
     display: flex;
     align-content: center;
@@ -69,17 +65,21 @@
     overflow: hidden;
     img {
       transition: transform 0.5s;
-      max-width: 100%;
+      width: 100%;
+      object-fit: fill;
     }
   }
+
   &-item__text {
     display: grid;
-    padding: 20px 20px 32px 20px;
+    grid-template-rows: 66px 1fr;
+    padding: 20px 20px 0 20px;
     align-content: center;
   }
+
   &-item__text h3 {
     font-size: 18px;
-    letter-spacing: 1px;
+    letter-spacing: 0.05em;
     line-height: 20px;
     text-align: center;
     font: {
@@ -87,13 +87,127 @@
       family: "Roboto Slab";
     }
   }
+
   &-item__text p {
     text-align: center;
+    line-height: 20px;
     font: {
       weight: 400;
       family: $font-main;
     }
   }
+
+  &-item:nth-of-type(1) {
+    grid-area: p1;
+    h3 {
+      padding-top: 51px;
+    }
+    p {
+      padding: 28px 7px 0px 7px;
+    }
+    @media (max-width: 992px) and (min-width: 768px + 0.1) {
+      h3 {
+        padding-top: 45px;
+      }
+      p {
+        padding: 24px 7px 0px 7px;
+      }
+    }
+  }
+
+  &-item:nth-of-type(2) {
+    grid-area: p2;
+    h3 {
+      padding-top: 27px;      
+    }
+    @media (max-width: 992px) and (min-width: 768px + 0.1) {
+      h3 {
+        padding-top: 32px;
+      }
+      p {
+        padding: 10px 0 0 0;
+      }
+    }
+  }
+
+  &-item:nth-of-type(3) {
+    grid-area: p3;
+    .posts-item__text {
+      padding: 20px 12px 0 12px;
+    }
+    h3 {
+      padding-top: 27px;
+    }
+    p {
+      padding-top: 20px;
+      letter-spacing: 0.01em;
+    }
+    @media (max-width: 992px) and (min-width: 768px + 0.1) {
+      h3 {
+        padding-top: 21px;
+      }
+      p {
+        padding: 21px 7px 0px 7px;
+        letter-spacing: normal;
+      }
+    }
+  }
+
+  &-item:nth-of-type(4) {
+    grid-area: p4;
+    @media (max-width: 992px) and (min-width: 768px + 0.1) {
+      h3 {
+        padding-top: 52px;
+      }
+      p {
+        padding: 30px 7px 0px 7px;
+      }
+    }
+  }
+
+  &-item:nth-of-type(5) {
+    grid-area: p5;
+    .posts-item__text {
+      padding: 20px 12px 0 12px;
+    }
+    h3 {
+      padding-top: 27px;
+    }
+    p {
+      padding-top: 21px;
+    }
+    @media (max-width: 992px) and (min-width: 768px + 0.1) {
+      h3 {
+        padding-top: 58px;        
+      }
+      p {
+        padding: 29px 7px 0px 7px;
+      }
+    }
+  }
+
+  &-item:nth-of-type(6) {
+    grid-area: p6;
+    h3 {
+      padding-top: 64px;
+    }
+    p {
+      padding: 42px 16px 0 16px;
+    }
+    @media (max-width: 992px) and (min-width: 768px + 0.1) {
+      h3 {
+        padding-top: 29px;
+      }
+      p {
+        padding: 13px 7px 0px 3px;
+      }
+      .posts-item__text--words {
+        display: none;
+      }
+    }
+  }
+
+
   &__btn-container {
     display: flex;
     justify-content: center;
@@ -101,6 +215,10 @@
       color: $color-light;
       margin-right: 1px;
       padding-left: 12px;
+      @media (max-width: 992px) and (min-width: 768px + 0.1) {
+        padding: 0;
+        height: 60px;
+      }
     }
   }
 }

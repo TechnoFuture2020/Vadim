@@ -2,6 +2,10 @@
   background-color: $color-primary;
   padding-top: 30px;
   padding-bottom: 30px;
+  @media (max-width: 992px) and (min-width: 768px + 0.1) {
+    padding-top: 19px;
+    padding-bottom: 22px;
+  }
 
   &__container {
     display: grid;
@@ -9,6 +13,9 @@
     grid-gap: 20px;
     max-width: 1300px;
     margin: 0 auto;
+    @media (max-width: 992px) and (min-width: 768px + 0.1) {
+      padding: 0px 20px;
+    }
   }
   &__item {
     display: block;
@@ -29,7 +36,17 @@
       weight: 400;
       family: $font-main;
     }
-
+    @media (max-width: 992px) and (min-width: 768px + 0.1) {
+      padding-left: 19px;
+      padding-bottom: 10px;
+      font-size: 1rem;
+      line-height: 2.3;
+      letter-spacing: 2px;
+      &:nth-child(3) {
+        padding-right: 16px;
+      }
+    }
+    
     &:hover, &:focus {
       border-color: rgba($color-light, 0.15);
       border-bottom-color: $color-light;
@@ -44,6 +61,7 @@
     &[type=submit] {
       background-color: rgba($color-light, 0.1);
     }
+
     &[type=submit]:hover, &[type=submit]:focus {
       cursor: pointer;
       border-color: $color-light;
@@ -51,10 +69,3 @@
     }
   }
 }
-
-// Кудись вперти ци стилi
-// .form .btn--primary:hover, .form .btn--primary:focus {
-//   cursor: pointer;
-//   border-color: #ffffff;
-//   background-color: #d66926;
-// }
