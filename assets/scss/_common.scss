@@ -23,8 +23,10 @@ h1 {
   }
 }
 h2 {
-  font-size: 40px;
-  line-height: 48px;
+  @media (min-width: 992px + 0.1) {
+    font-size: 40px;
+    line-height: 48px;
+  }
   color: $color-primary;
   font-weight: 700;
   font-family: $font-RobotoSlab;
@@ -40,10 +42,11 @@ input:focus {
   outline: none;
 }
 .btn {
-  min-width: 250px;
   border: 2px solid $color-light;
   background-color: rgba(255, 255, 255, 0.1);
-  
+  @media (min-width: 992px + 0.1) {
+    min-width: 250px;
+  }
   @media (max-width: 992px) and (min-width: 768px + 0.1) {
     min-width: 200px;
     height: 50px;
@@ -60,6 +63,33 @@ input:focus {
   max-width: 100%;
   height: auto;
 }
+
+.btn,
+.btn-accent {
+  display: block;
+  // висоту бажано ставити, бо line-height може збити все
+  font-weight: 400;
+  text-align: center;
+  transition: background-color 0.5s;
+  height: 60px; // если шо убрать эту высоту на фиг
+  @media (min-width: 992px + 0.1) {
+    padding: 18px 10px;
+    font-size: 1.125rem;
+  }
+  @media (min-width: 768px + 0.1) {
+    letter-spacing: 0.1em;
+    font-size: 1.125rem;
+  }
+  @media (max-width: 768px) and (min-width: 576px + 0.1) {
+    letter-spacing: 0.1em;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+  }
+}
+
 .btn-accent {
   min-width: 350px;
   border: 2px solid $color-primary;
@@ -69,27 +99,13 @@ input:focus {
     padding: 24px 10px 10px 10px;
     height: 66px;
   }
-
+  @media (max-width: 768px) and (min-width: 576px + 0.1) {
+    padding: 15px 6px 18px 10px;
+    margin-left: 0;
+    letter-spacing: 0.17em;
+  }
   @media (max-width: 576px) {
       min-width: auto;
       width: 100%;
-  }
-}
-
-.btn,
-.btn-accent {
-  display: block;
-  padding: 18px 10px;
-  height: 60px; 
-  // висоту бажано ставити, бо line-height може збити все
-  font-size: 1.125rem;
-  font-weight: 400;
-  letter-spacing: 0.1em;
-  text-align: center;
-  transition: background-color 0.5s;
-
-  &:hover,
-  &:focus {
-    background-color: $color-accent;
   }
 }

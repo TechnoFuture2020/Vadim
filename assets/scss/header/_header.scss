@@ -1,6 +1,6 @@
 // - - - - HEADER - - - - 
 .header {
-  min-height: 118.5vh;
+  min-height: 118.4vh;
   background-color: $color-primary;
   background-image: url(../img/img-header.png);
   background-position: 50% 0%;
@@ -15,5 +15,11 @@
   @media (max-width: 992px) and (min-width: 768px + 0.1) {
     align-items: center;
     min-height: 93.9vh;
+  }
+  @media (max-width: 768px) and (min-width: 576px + 0.1) {
+    min-height: 68.6vh;
+  }
+  @media (max-width: 576px) {
+    min-height: 121.6vh;
   }
 }

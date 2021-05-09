@@ -1,33 +1,57 @@
 .footer {
-  padding: 37px 20px 68px;
+  // padding: 37px 20px 68px;
   text-align: center;
   background-color: $color-primary;
+  padding: 0 20px 0;
   &__container {
     max-width: 1340px;
     margin: auto;
     padding-right: 20px;
     padding-left: 20px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    @media (min-width: 992px + 0.1) {
+      min-height: 250px;
+    }
+    @media (max-width: 992px) and (min-width: 768px + 0.1) {
+      min-height: 251px;
+    } // Оптимизировать !!!
+    @media (max-width: 768px) and (min-width: 576px + 0.1) {
+        min-height: 251px;
+    }
   }
   &__social {
-    position: relative;
-    top: 1px;
     display: grid;
     justify-content: center;
-    margin-bottom: 53px;
     // grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
     grid-template-columns: repeat(5, auto);
     grid-column-gap: 18px;
+    position: relative;
+    @media (min-width: 992px + 0.1) {
+      padding-top: 5px; 
+    }
+    @media (max-width: 992px) and (min-width: 768px + 0.1) {
+      padding-top: 9px;
+    }
+    @media (max-width: 768px) and (min-width: 576px + 0.1) {
+      padding-top: 26px;
+    }
     &::after {
       content: "";
       display: block;
       width: 76px;
       height: 2px;
       position: absolute;
+      top: 80px;
       left: calc(50% - 38px);
-      top: 75px;
       background-color: rgba($color-light, 0.1);
       @media (max-width: 992px) and (min-width: 768px + 0.1) {
+        top: 82px;
         background-color: $color-light;
+      }
+      @media (max-width: 768px) and (min-width: 576px + 0.1) {
+        top: 101px;
       }
     }
     a {
@@ -43,22 +67,33 @@
     }
   }
   &__epigraph {
+    display: grid;
+    grid-template-rows: 1fr 0 1fr;
+    align-self: start;
+    height: 60px;
     span:nth-of-type(1) {
-      margin-right: -0.5em;
-      letter-spacing: 0.33em;
+      padding-top: 20px;
+      margin-left: 6px;
+      letter-spacing: 0.3em;
       font-weight: 100;
-      @media (max-width: 992px) and (min-width: 768px + 0.1) {
-        letter-spacing: 1px;
-        line-height: 20px;
-        color: $color-gray;
-        font-weight: 700;
-        margin-right: 0;
+      @media (max-width: 992px) and (min-width: 768.1px) {
+          letter-spacing: 1px;
+          line-height: 20px;
+          color: $color-gray;
+          font-weight: 700;
+          margin-left: 1px;
+          padding-top: 19px;
+      }
+      @media (max-width: 768px) and (min-width: 576px + 0.1) {
+        padding-top: 30px;
       }
     }
     span:nth-of-type(2) {
+      position: relative;
+      top: 2px;
       letter-spacing: 0.05em;
-      color: $color-gray-light;
       font-weight: 700;
+      color: $color-gray-light;
     }
   } 
 }

@@ -1,13 +1,18 @@
 /* - - - -  SKILLS-BLOCK  - - - - - */
 .skills {
-  padding: 10px 8px 40px 6px;
-
-  @media (max-width: 576px) {
-      padding: $gap-20;
+  @media (min-width: 992px + 0.1) {
+    padding: 10px 8px 40px 6px;
   }
   @media (max-width: 992px) and (min-width: 768px + 0.1) {
     padding: 10px 10px 40px 10px;
   }
+  @media (max-width: 768px) and (min-width: 576px + 0.1) {
+    padding: 10px 10px 41px 10px;
+  }
+  @media (max-width: 576px) {
+    padding: 3.5vw 3.8vw;
+  }
+
   &__container {
     display: grid;
     grid-gap: 10px;
@@ -29,14 +34,18 @@
     }
 
     @media (max-width: 768px) and (min-width: 576px + 0.1) {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: "a1 a2"
-                             "a3 a2"
-                             "a4 a4"
-                             "a5 a6"
-                             "a5 a7"
-                             "a8 a9";
+      min-height: 2160px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto auto auto auto minmax(360px, auto) auto;
+      grid-template-areas:
+          "a1 a2"
+          "a3 a2"
+          "a4 a4"
+          "a5 a6"
+          "a5 a7"
+          "a8 a9";
     }
+
     @media (max-width: 576px) {
         grid-gap: $gap-20;
         grid-template-columns: 1fr;
@@ -53,12 +62,27 @@
   }
   
   &__button {
-    padding-top:  $gap-20;
+    padding-top: 21px;
     display: flex;
     justify-content: center;
 
     @media (max-width: 992px) and (min-width: 768px + 0.1) {
       padding-top: 19px;
+    }
+    @media (max-width: 768px) and (min-width: 576px + 0.1) {
+      padding-top: 20px;
+      .btn-accent {
+        padding: 19px 6px 18px 10px;
+        margin-left: 9px;
+        letter-spacing: 0.16em;
+      }
+    }
+    @media (max-width: 768px) {
+      .btn-accent {
+        font-size: 1.125rem;
+        letter-spacing: 0.11em;
+        padding: 3vw 0 0 0.3vw;
+      }
     }
   }
 }
@@ -70,9 +94,10 @@
   overflow: hidden;
   // ипсользование min-height упростит работу с респонсив
   // background-color: red;
-
-  @media (max-width: 992px) and (min-width: 768px + 0.1) {
+  @media (max-width: 992px) {
     min-height: calc(43vh - 1px);
+  }
+  @media (max-width: 992px) and (min-width: 768px + 0.1) {
     max-width: 640px;
     &:nth-of-type(2), &:nth-of-type(3) { 
       min-width: 322px;
@@ -80,6 +105,18 @@
     &:nth-of-type(7) { 
       max-width: 320px;
       letter-spacing: 0.06em;
+    }
+  }
+  @media (max-width: 768px) and (min-width: 576px + 0.1) {
+    &:nth-of-type(4) .skills-item__link {
+      padding-bottom: 42px;
+    }
+  }
+  @media (max-width: 576px) {
+    &:nth-of-type(8) .skills-item__link {
+      position: relative;
+      right: 10px;
+      top: 2px;
     }
   }
 
@@ -152,10 +189,16 @@
     padding: $gap-20;
     align-items: center;
     justify-content: center;
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.14em;
     transition: color 0.5s;
+    @media (max-width: 768px) and (min-width: 576px + 0.1) {
+      letter-spacing: 0.09em;
+    }
+    @media (max-width: 576px) {
+      letter-spacing: 0.08em;
+    }
   }
 
   &:hover {

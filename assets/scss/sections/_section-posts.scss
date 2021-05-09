@@ -2,8 +2,15 @@
   padding-top: 100px;
   padding-bottom: 101px;
   @media (max-width: 992px) and (min-width: 768px + 0.1) {
-    padding-top: 62px;
+    padding-top: 68px;
     padding-bottom: 80px;
+  }
+  @media (max-width: 768px) and (min-width: 576px + 0.1) {
+    padding-top: 59px;
+    padding-bottom: 60px;
+  }
+  @media (max-width: 576px) {
+    padding-top: 10.4vw;
   }
 
   &__container {
@@ -11,14 +18,28 @@
     margin: auto;
     padding-right: 20px;
     padding-left: 20px;
+    @media (max-width: 768px) and (min-width: 576px + 0.1) {
+      max-width: 764px;
+    }
+    @media (max-width: 576px) {
+      padding-right: 3.8vw;
+      padding-left: 3.8vw;
+    }
     h2 {
-      letter-spacing: 4px;
+      letter-spacing: 0.1em;
       margin-top: 2px;
       margin-bottom: 56px;
       @media (max-width: 992px) and (min-width: 768px + 0.1) {
         font-size: 2rem;
-        letter-spacing: 0.1em;
-        margin-bottom: 50px;
+        margin-bottom: 56px;
+      }
+      @media (max-width: 768px) and (min-width: 576px + 0.1) {
+        margin-bottom: 30px;
+      }
+      @media (max-width: 576px) {
+        text-align: center;
+        margin-top: 1px;
+        margin-bottom: 5.7vw;
       }
     }
   }
@@ -36,6 +57,24 @@
                            "p5 p5 p6";
       grid-template-columns: repeat(3, 1fr);
     }
+    @media (max-width: 768px) and (min-width: 576px + 0.1) {
+      grid-template-areas: "p1 p2 "
+                           "p3 p4"
+                           "p5 p6";
+      grid-template-columns: repeat(2, 1fr);
+      padding-bottom: 19px;
+    }
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+          "p1"
+          "p2"
+          "p3"
+          "p4"
+          "p5"
+          "p6";
+  
+    }
   }
 
   &-item {
@@ -46,6 +85,11 @@
       background-color: $color-gray3;
       .posts-item__img img {
         transform: scale(1.1);
+      }
+    }
+    @media (max-width: 768px) and (min-width: 576px + 0.1) {
+      .text-none {
+        display: none;
       }
     }
   }
@@ -73,7 +117,7 @@
   &-item__text {
     display: grid;
     grid-template-rows: 66px 1fr;
-    padding: 20px 20px 0 20px;
+    padding: 20px 20px 20px 20px;
     align-content: center;
   }
 
@@ -113,28 +157,49 @@
         padding: 24px 7px 0px 7px;
       }
     }
+    @media (max-width: 768px) and (min-width: 576px + 0.1) {
+      img {
+        object-fit: cover;
+        object-position: 50% 0px;
+      }
+    }
   }
 
   &-item:nth-of-type(2) {
     grid-area: p2;
     h3 {
-      padding-top: 27px;      
+      padding-top: 27px;
     }
     @media (max-width: 992px) and (min-width: 768px + 0.1) {
       h3 {
         padding-top: 32px;
       }
       p {
-        padding: 10px 0 0 0;
+        padding: 10px 2px 0 0;
+      }
+    }
+    @media (max-width: 768px) and (min-width: 576px + 0.1) {
+      h3 {
+        padding-top: 39px;
+      }
+      p {
+        padding: 10px 24px 0 20px;
+      }
+    }
+    @media (max-width: 576px) {
+      h3 {
+        padding-top: 6.6vw;
+      }
+      p {
+        max-width: 49vw;
+        padding-top: 1.8vw;
+        justify-self: center;
       }
     }
   }
 
   &-item:nth-of-type(3) {
     grid-area: p3;
-    .posts-item__text {
-      padding: 20px 12px 0 12px;
-    }
     h3 {
       padding-top: 27px;
     }
@@ -147,20 +212,66 @@
         padding-top: 21px;
       }
       p {
-        padding: 21px 7px 0px 7px;
+        padding: 21px 10px 0 7px;
         letter-spacing: normal;
+      }
+    }
+    @media (max-width: 768px) and (min-width: 576px + 0.1) {
+      p {
+        padding: 21px 35px 0 31px;
+        letter-spacing: 0.001em;
+      }
+    }
+    @media (min-width: 576px + 0.1) {
+      .posts-item__text {
+        padding: 20px 12px 0 12px;
+      }
+    }
+    @media (max-width: 576px) {
+      p {
+        max-width: 47vw;
+        padding-top: 3.8vw;
+        justify-self: center;
+        letter-spacing: 0.001em;
       }
     }
   }
 
   &-item:nth-of-type(4) {
     grid-area: p4;
+    @media (min-width: 992px + 0.1) {
+      h3 {
+        padding-top: 27px;
+      }
+    }
     @media (max-width: 992px) and (min-width: 768px + 0.1) {
       h3 {
         padding-top: 52px;
       }
       p {
         padding: 30px 7px 0px 7px;
+      }
+    }
+    @media (max-width: 768px) and (min-width: 576px + 0.1) {
+      h3 {
+        padding-top: 58px;
+      }
+       p {
+        padding: 39px 20px 20px 20px;
+       }
+    }
+    @media (max-width: 576px) {
+      .text-none2 {
+        display: none;
+      }
+      h3 {
+        padding-top: 10.1vw;
+      }
+      p {
+        padding-top: 6.9vw;
+      }
+      .word-break {
+        word-spacing: 57vw;
       }
     }
   }
@@ -170,29 +281,41 @@
     .posts-item__text {
       padding: 20px 12px 0 12px;
     }
-    h3 {
-      padding-top: 27px;
-    }
-    p {
-      padding-top: 21px;
+    @media (min-width: 992px + 0.1) {
+      h3 {
+        padding-top: 27px;
+      }
+      p {
+        padding-top: 21px;
+      }
     }
     @media (max-width: 992px) and (min-width: 768px + 0.1) {
       h3 {
         padding-top: 58px;        
       }
       p {
-        padding: 29px 7px 0px 7px;
+        padding: 29px 9px 0 7px;
       }
+    }
+    @media (max-width: 768px) and (min-width: 576px + 0.1) {
+      h3 {
+        padding-top: 49px;
+      }
+       p {
+        padding: 29px 22px 0 18px;
+       }
     }
   }
 
   &-item:nth-of-type(6) {
     grid-area: p6;
-    h3 {
-      padding-top: 64px;
-    }
-    p {
-      padding: 42px 16px 0 16px;
+    @media (min-width: 992px + 0.1) {
+      h3 {
+        padding-top: 64px;
+      }
+      p {
+        padding: 42px 16px 0 16px;
+      }
     }
     @media (max-width: 992px) and (min-width: 768px + 0.1) {
       h3 {
@@ -201,9 +324,17 @@
       p {
         padding: 13px 7px 0px 3px;
       }
-      .posts-item__text--words {
+      .text-none {
         display: none;
       }
+    }
+    @media (max-width: 768px) and (min-width: 576px + 0.1) {
+      h3 {
+        padding-top: 35px;
+      }
+       p {
+        padding: 12px 23px 0 20px;
+       }
     }
   }
 
