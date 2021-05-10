@@ -49,7 +49,7 @@
     }
     h2 {
       @media (min-width: 992px + 0.1) {
-        margin: 10px 0 52px;
+        margin: 10px 0 49px;
         letter-spacing: 0.093em;
       }
       @media (max-width: 992px) and (min-width: 768px + 0.1) {
@@ -75,11 +75,11 @@
     p {
       font-size: 18px;
       letter-spacing: 0.05em;
-      line-height: 23px;
+      line-height: 24px;
       font-weight: 400;
       font-family: $font-main;
       @media (min-width: 992px + 0.1) {
-        margin-top: 18px;
+        margin-top: 16px;
       }
       @media (max-width: 992px) and (min-width: 768px + 0.1) {
         line-height: 24px;
@@ -98,7 +98,7 @@
           padding-top: 25px;
         }
         &:nth-child(3) {
-          padding-top: 21px;
+          padding-top: 15px;
         }
       }
       @media (max-width: 576px) {

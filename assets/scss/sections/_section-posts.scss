@@ -11,6 +11,7 @@
   }
   @media (max-width: 576px) {
     padding-top: 10.4vw;
+    padding-bottom: 10.4vw;
   }
 
   &__container {
@@ -143,11 +144,13 @@
 
   &-item:nth-of-type(1) {
     grid-area: p1;
-    h3 {
-      padding-top: 51px;
-    }
-    p {
-      padding: 28px 7px 0px 7px;
+    @media (min-width: 992px + 0.1) {
+      h3 {
+        padding-top: 51px;
+      }
+      p {
+        padding: 28px 7px 0px 7px;
+      }
     }
     @media (max-width: 992px) and (min-width: 768px + 0.1) {
       h3 {
@@ -158,17 +161,36 @@
       }
     }
     @media (max-width: 768px) and (min-width: 576px + 0.1) {
+      h3 {
+        padding-top: 51px;
+      }
+      p {
+        padding: 28px 7px 0px 7px;
+      }
       img {
         object-fit: cover;
         object-position: 50% 0px;
+      }
+    }
+    @media (max-width: 576px) {
+      h3 {
+        padding-top: 51px;
+      }
+      p {
+        padding: 28px 7px 0px 7px;
       }
     }
   }
 
   &-item:nth-of-type(2) {
     grid-area: p2;
+    @media (min-width: 992px + 0.1) {
     h3 {
       padding-top: 27px;
+    }
+    p {
+      padding-right: 4px;
+    }
     }
     @media (max-width: 992px) and (min-width: 768px + 0.1) {
       h3 {
@@ -200,12 +222,14 @@
 
   &-item:nth-of-type(3) {
     grid-area: p3;
-    h3 {
-      padding-top: 27px;
-    }
-    p {
-      padding-top: 20px;
-      letter-spacing: 0.01em;
+    @media (min-width: 992px + 0.1) {
+      h3 {
+        padding-top: 27px;
+      }
+      p {
+        padding-top: 20px;
+        padding-right: 5px;
+      }
     }
     @media (max-width: 992px) and (min-width: 768px + 0.1) {
       h3 {
@@ -226,8 +250,18 @@
       .posts-item__text {
         padding: 20px 12px 0 12px;
       }
+      h3 {
+        padding-top: 27px;
+      }
+      p {
+        padding-top: 20px;
+        padding-right: 5px;
+      }
     }
     @media (max-width: 576px) {
+      h3 {
+        padding-top: 27px;
+      }
       p {
         max-width: 47vw;
         padding-top: 3.8vw;
@@ -242,6 +276,9 @@
     @media (min-width: 992px + 0.1) {
       h3 {
         padding-top: 27px;
+      }
+      p {
+        padding-right: 3px;
       }
     }
     @media (max-width: 992px) and (min-width: 768px + 0.1) {
@@ -287,6 +324,7 @@
       }
       p {
         padding-top: 21px;
+        padding-right: 4px;
       }
     }
     @media (max-width: 992px) and (min-width: 768px + 0.1) {
@@ -305,6 +343,17 @@
         padding: 29px 22px 0 18px;
        }
     }
+    @media (max-width: 576px) {
+      h3 {
+        padding-top: 10.1vw;
+      }
+      .text-none2 {
+        display: none;
+      }
+      p {
+        padding-top: 6.6vw;
+      }
+    }
   }
 
   &-item:nth-of-type(6) {
@@ -314,7 +363,8 @@
         padding-top: 64px;
       }
       p {
-        padding: 42px 16px 0 16px;
+        padding: 42px 16px 0 14px;
+        letter-spacing: 0.0009em;
       }
     }
     @media (max-width: 992px) and (min-width: 768px + 0.1) {
@@ -336,19 +386,37 @@
         padding: 12px 23px 0 20px;
        }
     }
+    @media (max-width: 576px) {
+      h3 {
+        padding-top: 6.1vw;
+      }
+      p {
+        max-width: 47vw;
+        padding-top: 2.1vw;
+        justify-self: center;
+        letter-spacing: 0.001em;
+      }
+    }
   }
-
 
   &__btn-container {
     display: flex;
     justify-content: center;
     .btn-accent[type=button] {
       color: $color-light;
-      margin-right: 1px;
       padding-left: 12px;
       @media (max-width: 992px) and (min-width: 768px + 0.1) {
-        padding: 0;
+        padding: 0 0 0 4px;
         height: 60px;
+      }
+      @media (min-width: 576px + 0.1) {
+        margin-right: 1px;
+        padding-top: 17px;
+      }
+      @media (max-width: 576px) {
+        padding-left: 0.7vw;
+        letter-spacing: 0.17em;
+        margin-right: 0;
       }
     }
   }

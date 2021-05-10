@@ -1,8 +1,10 @@
 .footer {
-  // padding: 37px 20px 68px;
   text-align: center;
   background-color: $color-primary;
   padding: 0 20px 0;
+
+
+      // padding: 0 3.5vw 7.4vw;
   &__container {
     max-width: 1340px;
     margin: auto;
@@ -14,11 +16,14 @@
     @media (min-width: 992px + 0.1) {
       min-height: 250px;
     }
-    @media (max-width: 992px) and (min-width: 768px + 0.1) {
+    // @media (max-width: 992px) and (min-width: 768px + 0.1) {
+    //   min-height: 251px;
+    // } // Оптимизировать !!!
+    // @media (max-width: 768px) and (min-width: 576px + 0.1) {
+    //     min-height: 251px;
+    // }
+    @media (max-width: 992px) {
       min-height: 251px;
-    } // Оптимизировать !!!
-    @media (max-width: 768px) and (min-width: 576px + 0.1) {
-        min-height: 251px;
     }
   }
   &__social {
@@ -37,21 +42,29 @@
     @media (max-width: 768px) and (min-width: 576px + 0.1) {
       padding-top: 26px;
     }
+    @media (max-width: 576px) {
+      padding-top: 4.7vw;
+    }
     &::after {
       content: "";
       display: block;
       width: 76px;
       height: 2px;
       position: absolute;
-      top: 80px;
       left: calc(50% - 38px);
       background-color: rgba($color-light, 0.1);
+      @media (min-width: 992px + 0.1) {
+        top: 80px;
+      }
       @media (max-width: 992px) and (min-width: 768px + 0.1) {
         top: 82px;
         background-color: $color-light;
       }
       @media (max-width: 768px) and (min-width: 576px + 0.1) {
         top: 101px;
+      }
+      @media (max-width: 576px) {
+        top: 102px;
       }
     }
     a {
@@ -71,6 +84,11 @@
     grid-template-rows: 1fr 0 1fr;
     align-self: start;
     height: 60px;
+    @media (max-width: 576px) {
+      align-self: start;
+      padding-top: 1.9vw;
+    }
+
     span:nth-of-type(1) {
       padding-top: 20px;
       margin-left: 6px;
@@ -88,6 +106,7 @@
         padding-top: 30px;
       }
     }
+
     span:nth-of-type(2) {
       position: relative;
       top: 2px;
