@@ -449,13 +449,6 @@ template {
   display: none;
 }
 
-/* ul */
-/* xl */
-/* lg */
-/* md */
-/* sm */
-/* xs */
-/* xx */
 .header-menu__container, .header-content__container {
   max-width: 1338px;
   margin: auto;
@@ -564,7 +557,6 @@ input:focus {
 }
 
 .header-menu {
-  position: relative;
   position: absolute;
   top: 0;
   right: 0;
@@ -1094,6 +1086,10 @@ input:focus {
   text-align: center;
   background-color: #2d3651;
   padding: 0 20px 0;
+}
+
+.footer .footer-validator-css {
+  padding-top: 10px;
 }
 
 .footer__container {

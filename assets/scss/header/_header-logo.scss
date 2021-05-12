@@ -3,12 +3,8 @@
   // 24px / 16px = 1.5rem, 16px розмiр указаний в html
   letter-spacing: 0.23em;
   padding: $gap-20 0px;
-  // em - береться вiдсоток вiд розмiру шрифта указаного в даному блоцi. А якщо не указано то буде братися вiд ближайшого батька
-  // line-height: 20px;
-  // color: #ffffff;
-  // font-weight: 400;
-  // font-family: "Roboto";
-  // text-align: center;
+  // em - береться вiдсоток вiд розмiру шрифта указаного в даному блоцi. 
+  // А якщо не указано то буде братися вiд ближайшого батька
   @media (max-width: 768px) and (min-width: 576px + 0.1) {
     padding: 20px 0 12px;
   }

@@ -94,7 +94,6 @@
   min-height: calc(39vh - 6px);
   overflow: hidden;
   // ипсользование min-height упростит работу с респонсив
-  // background-color: red;
   @media (max-width: 992px) {
     min-height: calc(43vh - 1px);
   }

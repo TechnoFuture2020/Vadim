@@ -1,6 +1,5 @@
 .header-menu {
-  position: relative; // таким способом поднимаем контент над overlay
-  position: absolute;
+  position: absolute; // таким способом поднимаем контент над overlay
   top: 0;
   right: 0;
   left: 0;
@@ -11,10 +10,10 @@
   }
 
   &__container {
-    display: grid;         // разметска гридом
+    display: grid;
     grid-template-columns: auto 1fr;
     // 1fr - все оставшееся пространство
-    align-items: center; //вертикальное выравнивание
+    align-items: center;
     position: relative;
     @extend %container;
   }

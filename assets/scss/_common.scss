@@ -9,7 +9,6 @@ html {
   overflow-y: scroll;
   font-family: $font-main;
   font-size: $font-size-16; // обычно берут 16px за стандарт
-  // letter-spacing: 0.1em;
   color: $color-gray;
 }
 
@@ -71,7 +70,7 @@ input:focus {
   font-weight: 400;
   text-align: center;
   transition: background-color 0.5s;
-  height: 60px; // если шо убрать эту высоту на фиг
+  height: 60px;
   @media (min-width: 992px + 0.1) {
     padding: 18px 10px;
     font-size: 1.125rem;
