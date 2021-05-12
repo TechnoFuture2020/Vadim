@@ -1878,7 +1878,7 @@ input:focus {
     padding: 0 3.6vw;
     grid-template-columns: 1fr;
   }
-  .form__item:not(.form__item:last-child) {
+  .form__item:nth-child(1), .form__item:nth-child(2) {
     padding-left: 19px;
     padding-top: 8px;
     padding-bottom: 9px;

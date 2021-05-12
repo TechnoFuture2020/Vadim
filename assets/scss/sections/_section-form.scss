@@ -76,7 +76,7 @@
       }
     }
     @media (max-width: 576px) {
-      &:not(.form__item:last-child) {
+      &:nth-child(1), &:nth-child(2) {
         padding-left: 19px;
         padding-top: 8px;
         padding-bottom: 9px;
